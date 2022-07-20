@@ -15,21 +15,22 @@ function computerPlay() {
 let playerScore = 0;
     let computerScore = 0;
 
-function playerPlay() {
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-          return (button.id);
-        });
-    });
-}
+// function playerPlay() {
+//    const rock = document.querySelector('#rock');
+//    rock.onclick = () => {return "Rock";    
+// }
+//    const paper = document.querySelector('#paper');
+//    paper.onclick = () => {return "Paper"; 
+//    }
+//    const scissors = document.querySelector('#scissors');
+//    scissors.onclick = () => {return "Scissors"; 
+// }};
 
-function playRound() {
+function playRound(playerChoice) {
 
     
 
     let computerChoice = computerPlay();
-    let playerChoice = playerPlay();
     console.log(`You chose ${playerChoice}.`)
     console.log(`The computer chose ${computerChoice}!`)
 
@@ -66,11 +67,16 @@ function playRound() {
    
 function playGame() {
 
+    let buts = document.querySelectorAll('button');
+    buts.forEach((button) =>
+    button.addEventListener("click", () => {
+        if (button.id){
+            playRound(button.id);
+        }
+    })
+    );
     
-    while (playerScore < 5 && computerScore < 5) {
-        console.log(playRound());
     }
-}
 
-console.log(playGame())
+
   
