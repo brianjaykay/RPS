@@ -12,12 +12,13 @@ function computerPlay() {
     }
     
 }
+let playerScore = 0;
+    let computerScore = 0;
 function playRound() {
 
-    let playerScore = 0
-    let computerScore = 0
+    
 
-    let computerSelection = computerPlay();
+    let computerChoice = computerPlay();
     let playerSelection = prompt("Player Choice: ");
     let playerChoice = (playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase())
     console.log(`You chose ${playerChoice}.`)
@@ -25,8 +26,7 @@ function playRound() {
 
     if (playerChoice === "Rock" && computerChoice === "Rock") {
         console.log("It's a tie");
-        return playerScore += 0;
-        return computerScore += 0;
+        
     } else if (playerChoice === "Rock" && computerChoice === "Paper"){
         console.log("Paper covers Rock!");
         return computerScore += 1;
@@ -38,8 +38,7 @@ function playRound() {
         return playerScore += 1;
     }  else if (playerChoice === "Paper" && computerChoice === "Paper"){
         console.log("It's a tie");
-        playerScore += 0;
-        return computerScore += 0;
+        
     }  else if (playerChoice === "Paper" && computerChoice === "Scissors"){
         console.log("Scissors cut Paper!");
         return computerScore += 1;
@@ -51,14 +50,14 @@ function playRound() {
         return playerScore += 1;
     }  else if (playerChoice === "Scissors" && computerChoice === "Scissors"){
         console.log("It's a tie");
-        return playerScore += 0
-        return computerScore += 0;
+    
     }
     
   }
    
 function playGame() {
 
+    
     while (playerScore < 5 && computerScore < 5) {
         console.log(playRound());
     }
