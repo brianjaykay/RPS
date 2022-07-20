@@ -14,13 +14,22 @@ function computerPlay() {
 }
 let playerScore = 0;
     let computerScore = 0;
+
+function playerPlay() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          return (button.id);
+        });
+    });
+}
+
 function playRound() {
 
     
 
     let computerChoice = computerPlay();
-    let playerSelection = prompt("Player Choice: ");
-    let playerChoice = (playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase())
+    let playerChoice = playerPlay();
     console.log(`You chose ${playerChoice}.`)
     console.log(`The computer chose ${computerChoice}!`)
 
