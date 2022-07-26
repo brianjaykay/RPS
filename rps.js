@@ -14,12 +14,12 @@ function computerPlay() {
 }
 let playerScore = 0;
     let computerScore = 0;
-function playRound() {
+function playRound(playerSelection) {
 
     
 
     let computerChoice = computerPlay();
-    let playerSelection = prompt("Player Choice: ");
+    // let playerSelection = prompt("Player Choice: ");
     let playerChoice = (playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase())
     console.log(`You chose ${playerChoice}.`)
     console.log(`The computer chose ${computerChoice}!`)
@@ -63,5 +63,18 @@ function playGame() {
     }
 }
 
-console.log(playGame())
-  
+
+    let rockBtn = document.querySelector('.rock');
+    rockBtn.addEventListener('click', function (e) {
+        playRound("Rock")
+      });
+
+    let paperBtn = document.querySelector('.paper');
+    paperBtn.addEventListener('click', function (e) {
+        playRound("Paper")
+        });
+
+    let scissorsBtn = document.querySelector('.scissors');
+    scissorsBtn.addEventListener('click', function (e) {
+        playRound("Scissors")
+        });
