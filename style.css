@@ -1,0 +1,19 @@
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.scores-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 4em;
+}
+
+.choices{
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+    margin-top: 3em;
+}
